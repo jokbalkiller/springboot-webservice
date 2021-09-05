@@ -1,5 +1,5 @@
-# springboot-webservice
-Simple SpringBoot WebService Study &amp; Project based on '스프링부트와 ASW로 혼자 구현하는 웹서비스(이동욱)'
+# IntelliJ를 사용한 springboot-Webservice 학습 
+Simple SpringBoot WebService Study &amp; Project based on 📖 '스프링부트와 ASW로 혼자 구현하는 웹서비스(이동욱)'
 
 ## 중요 정리 목록
 🔥 build.gradle 정의 및 설정
