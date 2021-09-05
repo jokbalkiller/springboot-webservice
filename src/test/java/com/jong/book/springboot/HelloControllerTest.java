@@ -7,10 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.ResultMatcher;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.assertj.core.internal.bytebuddy.matcher.ElementMatchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /*
 컨트롤러를 구현한 후 직접 서버에서 실행하기 전 테스트 코드를 무조건 진행하여 확인해보는 습관을 기르는것이 중요하다.
@@ -44,5 +45,19 @@ public class HelloControllerTest {
         mvc.perform(get("/hello")) // /hello 주소로 get 요청 테스트 진행
                 .andExpect(status().isOk()) // response status가 200이고 
                 .andExpect(content().string(hello)); // 해당 내용이 "hello" 라면 성공
+    }
+
+    @Test
+    public void helloDto가_리턴된다() throws Exception {
+        String name = "hello";
+        int amount = 1000;
+        /*
+        * /hello/dto 에 name과 param을 파라미터로 요청한다
+        * JSON응답값이 해당 값과 같으면 성공
+        * */
+        mvc.perform(get("/hello/dto").param("name", name).param("amount",String.valueOf(amount)))
+                .andExpect(status().isOk())
+                .andExpect((ResultMatcher) jsonPath("$.name", is(name)))
+                .andExpect((ResultMatcher) jsonPath("$.amount", is(amount)));
     }
 }
