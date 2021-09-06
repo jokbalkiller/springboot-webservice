@@ -27,9 +27,19 @@ dependencies {
     implementation ('org.springframework.boot:spring-boot-starter-web')
     testImplementation ('org.springframework.boot:spring-boot-starter-test')
 
-    // lombok 설정
+    // lombok
     implementation('org.projectlombok:lombok')
     annotationProcessor('org.projectlombok:lombok')
     testImplementation('org.projectlombok:lombok')
     testAnnotationProcessor('org.projectlombok:lombok')
+
+    // Spring Data JPA
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+    /*
+    인메모리형 데이터 베이스
+    별도의 설치가 필요하지 않음.
+    메모리에서 실행되기 때문에 APP 재시작시 초기화되는 점을 이용하여 테스트 용도로 많으 사용된다.
+     */
+    implementation('com.h2database:h2')
+
 }

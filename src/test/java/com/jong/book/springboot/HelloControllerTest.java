@@ -28,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(controllers = HelloController.class) //HelloController 컨트롤러 테스트 진행
 
 public class HelloControllerTest {
-    @Autowired // Spring 이 관리하는 Bean 주입
+
     
     /*
     private MockMvc mvc?
@@ -36,6 +36,7 @@ public class HelloControllerTest {
     스프링 MVC 테스트의 시작
     다양한 REST API 테스트 가능
      */
+    @Autowired // Spring 이 관리하는 Bean 주입
     private MockMvc mvc;
 
     @Test

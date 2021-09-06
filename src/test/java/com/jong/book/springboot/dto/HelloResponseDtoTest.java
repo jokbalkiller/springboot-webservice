@@ -17,7 +17,7 @@ public class HelloResponseDtoTest {
 
         //then 
         /*
-        assertThat(A).isEqualTo(B)
+        assertThat(A).isEqualTo(B) mjjjjjjjjjm
         A와 B의 값이 같을 때만 성공 
          */
         assertThat(dto.getName()).isEqualTo(name);
