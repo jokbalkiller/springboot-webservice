@@ -1,0 +1,9 @@
+# Simple SpringBoot WebService Study &amp; Project based on 📖 '스프링부트와 ASW로 혼자 구현하는 웹서비스(이동욱)'
+IDE : IntelliJ IDEA Community Edition 2021.2.1(212.5080.55)
+
+## 중요 정리 목록
+🔥 build.gradle 정의 및 설정
+
+🔥 테스트코드 작성(Mock)
+
+🔥 InteliJ에서의 lombok 적용 및 사용법 
