@@ -7,3 +7,5 @@ IDE : IntelliJ IDEA Community Edition 2021.2.1(212.5080.55)
 🔥 테스트코드 작성(Mock)
 
 🔥 InteliJ에서의 lombok 적용 및 사용법 
+
+🔥 JPA 설정 및 Entity class 와 Repository
