@@ -13,6 +13,6 @@ IDE : IntelliJ IDEA Community Edition 2021.2.1(212.5080.55)
 
 🔥 h2-console 
 
-🔥 JPA Auditing을 사용하여 Entity 시간 등록 자동화  
+🔥 JPA Auditing을 사용하여 Entity 시간 등록 자동화
 
 
