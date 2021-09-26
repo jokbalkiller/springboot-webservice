@@ -12,3 +12,7 @@ IDE : IntelliJ IDEA Community Edition 2021.2.1(212.5080.55)
 🔥 JPA 설정 및 Entity class 와 Repository
 
 🔥 h2-console 
+
+🔥 JPA Auditing을 사용하여 Entity 시간 등록 자동화  
+
+
