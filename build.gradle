@@ -41,4 +41,10 @@ dependencies {
     메모리에서 실행되기 때문에 APP 재시작시 초기화되는 점을 이용하여 테스트 용도로 많으 사용된다.
      */
     implementation('com.h2database:h2')
+
+    /*
+    스프링부트에서 공식 지원하는 템플릿 엔진
+    프론트엔드를 위한 mustache
+     */
+    implementation('org.springframework.boot:spring-boot-starter-mustache:2.5.5')
 }
