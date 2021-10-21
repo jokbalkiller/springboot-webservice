@@ -1,6 +1,9 @@
 package com.jong.book.springboot.domain.posts;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import java.util.List;
 
 /*
 보통 DAO라고 불리는 DB 접근자
@@ -9,5 +12,6 @@ extends JpaRepository<Entity 타입, PK 타입>을 상속하면 기본적인 CRU
 주의점은 둘은 아무 밀접한 관계임으로 유지 보수 및 성능을 위해 Entity와 같은 폴더 안에 위치해야한다.
  */
 public interface PostsRepository extends JpaRepository<Posts, Long> {
-
+    @Query("SELECT p FROM Posts p ORDER BY p.id DESC")
+    List<Posts> findAllDesc();
 }
